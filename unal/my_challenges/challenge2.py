@@ -17,15 +17,12 @@ AJSSDSAASASASSASADAJAJSS
 **************************************'''
 
 
-#This function counts how many times a letter is found in a word
-def letters_in_word(l:str, w:str) -> int:
-    #we initialize one counter to zero
-    counting_letters = 0
-    #iterate over the string and count the number of times the letter of interest is present.
+#This function evaluates whether a given letter is found in a given word
+def letters_in_word(l:str, w:str) -> bool:
     for i in w:
         if i == l:
-            counting_letters += 1
-    return counting_letters
+            return True
+    return False
 
 #solve
 def solve(d:str, j:str, p:str) -> str:
@@ -34,10 +31,13 @@ def solve(d:str, j:str, p:str) -> str:
     count_dioselina = 0
     count_juanquini = 0
     for i in p:
-        #We count how many times each letter of pedro's chain is in dioselina's and juanquini's chains.
-        count_dioselina += letters_in_word(i, d)
-        count_juanquini += letters_in_word(i, j)
-        #We compare the number of letters guessed by Diocelina and juanquini and save the respective output in a array.
+        #The existence of the letter in both strings is validated and the counter is incremented by one if the letter is in the word.
+        if letters_in_word(i, d) == True and letters_in_word(i, j) == False:
+            count_dioselina += 1
+        elif letters_in_word(i, d) == False and letters_in_word(i, j) == True:
+            count_juanquini += 1
+        
+        #The two counters are compared and the respective letter is stored in an array
         if count_dioselina > count_juanquini:
             rta.append("D")
         elif count_juanquini > count_dioselina:
@@ -46,7 +46,7 @@ def solve(d:str, j:str, p:str) -> str:
             rta.append("L")
     #We return the elements of the array converted into a string
     return "".join(rta)
-
+        
 #main function
 #inputs
 dioselina_chain = input()
