@@ -3,7 +3,19 @@ Luego del poco éxito de Barbarita para obtener los nombres de competidores que 
 
 Dioselina y Juanquini entregaron las iniciales de competidores que lograron identificar. Ante la pérdida de un nuevo negocio, Pedro revisó si empezaba las letras iniciales que Dioselina o Juanquini habían entregado. Si Dioselina identificó más iniciales correctas de competidores se especifica una ‘D’ y si Juanquini es quien identificó más se escribe 'J', pero si ambos identificaron el mismo número entonces se especifica una 'L'.
 
-Realice un programa que reciba las iniciales adivinadas por Dioselina y las iniciales adivinadas por Juanquini (como cadena de caracteres) y una cadena de caracteres con las primeras letras de los competidores identificados por Pedro e imprima en consola lo que él escribió después de la revisión y verificación con la Bruja Dioselina y el Mago Juanquini.'''
+Realice un programa que reciba las iniciales adivinadas por Dioselina y las iniciales adivinadas por Juanquini (como cadena de caracteres) y una cadena de caracteres con las primeras letras de los competidores identificados por Pedro e imprima en consola lo que él escribió después de la revisión y verificación con la Bruja Dioselina y el Mago Juanquini.
+
+Ejemplo:
+**************************************
+Entrada         Salida
+**************************************
+SDA             LLLLDDDDDDDDDDDDDDDDDDDD
+
+AHS
+
+AJSSDSAASASASSASADAJAJSS
+**************************************'''
+
 
 #This function counts how many times a letter is found in a word
 def letters_in_word(l:str, w:str) -> int:
@@ -34,7 +46,7 @@ def solve(d:str, j:str, p:str) -> str:
             rta.append("L")
     #We return the elements of the array converted into a string
     return "".join(rta)
-        
+
 #main function
 #inputs
 dioselina_chain = input()
