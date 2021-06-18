@@ -34,13 +34,13 @@ total_ganado=180    Ingresa la cantidad de ganado que heredaran 180
                     Hijo del medio: 60
                     Hijo menor: 30
 *************************************************************************
-total_ganado=6      Ingresa la cantidad de ganado que heredaran 9
+total_ganado=6      Ingresa la cantidad de ganado que heredaran 6
                     Total: 6
                     Hijo mayor: 3
                     Hijo del medio: 2
                     Hijo menor: 1
 *************************************************************************
-total_ganado=18     Ingresa la cantidad de ganado que heredaran 180
+total_ganado=18     Ingresa la cantidad de ganado que heredaran 18
                     Total: 18
                     Hijo mayor: 9
                     Hijo del medio: 6
