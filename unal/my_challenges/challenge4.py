@@ -30,13 +30,11 @@ def solve(d:dict, c:str) -> list:
         if letter in competitors.keys():
             #Sum of each of the values for each competitor
             total_cost += competitors[letter]
-            #Add the initial letter of each competitor in an array("rta")
+            #Add the initial letter of each competitor in an array("initials")
             initials.append(letter)
     rta.append(total_cost)
     rta.append(" ".join(map(str, initials)))
     return rta
-    #print(total_cost)
-    #print(" ".join((map(str, rta))))
     
 def main():
     #inputs
